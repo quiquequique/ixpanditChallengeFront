@@ -19,18 +19,23 @@ export default class PokesCards extends Component {
 
     render() {
         return (
-            <div className="col-md-12 col-lg-12">
-                <div className="col-md-4 col-lg-4">
-                    <div className="container">
-                        <h3>images</h3>
-                        {
-                            this.state.pokemons.map(pokemon => <div className="card card-body" key={pokemon.order}>
-                                <span className="border">
-                                <img src={pokemon.image} alt={pokemon.name} width="150" height="150"/>
-                                </span>
-                            </div>)
-                        }
-                    </div>
+            <div className="row m-2">
+                <div className="col-md-7">
+                    {
+                    this.state.pokemons.map(pokemon => <div className="card col-md-7 border-dark m-2" key={pokemon.order * Math.random()}>
+                        <div className='container'>
+                            <div className="row">
+                                <div className="col-md-8">
+                                    <img className="img" src={pokemon.image} alt={pokemon.name} style={{width: 200}}/>
+                                </div>
+                                <div className='col-md-4'>
+                                        <p className='' style={{textAlign: "right"}}> {pokemon.name}</p>
+                                        <p className='' style={{textAlign: "right"}}>order: {pokemon.order}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                    }
                 </div>
             </div>
         )
