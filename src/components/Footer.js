@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 export default class Footer extends Component {
     render() {
         return (
-            <div className="navbar navbar-dark bg-dark navbar-inverse navbar-fixed-bottom">
+            <div className="navbar navbar-dark bg-dark navbar-inverse fixed-bottom" style={{height:40}}>
                 <div className="container">
-                   <p className="navbar-text">© Random</p>
+                   <a href="https://github.com/quiquequique" className='navbar-text'>My gitHub</a>
                 </div>
            </div>
         )
